@@ -14,7 +14,7 @@ int main() {
     struct Process p[n];
     for (int i = 0; i < n; i++) {
         scanf("%s %d %d", p[i].pid, &p[i].at, &p[i].bt);
-        p[i].rt = p[i].bt; // remaining time initially = burst time
+        p[i].rt = p[i].bt;
     }
 
     int completed = 0, time = 0;
@@ -24,7 +24,6 @@ int main() {
         int idx = -1;
         int minRT = 1e9;
 
-        // find process with shortest remaining time among arrived processes
         for (int i = 0; i < n; i++) {
             if (p[i].at <= time && p[i].rt > 0 && p[i].rt < minRT) {
                 minRT = p[i].rt;
@@ -45,7 +44,7 @@ int main() {
                 totalTAT += p[idx].tat;
             }
         } else {
-            time++; // no process available, idle CPU
+            time++; 
         }
     }
 
