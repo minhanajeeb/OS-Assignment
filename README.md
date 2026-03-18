@@ -20,8 +20,4 @@ PID AT BT
 ## Language Used:
 C Programming
 
-## Author:
-Your Name
 
-## Github Repository:
-(Add your repository link here)
